@@ -16,6 +16,8 @@ Vue.component('task-list', {
           completed: false
         });
         this.newTask = '';
+        const parsed = JSON.stringify(this.tasks);
+        localStorage.setItem('tasks', parsed);
       }
     },
     completeTask(task) {
@@ -23,6 +25,8 @@ Vue.component('task-list', {
     },
     removeTask(index) {
       this.tasks.splice(index, 1);
+      const parsed = JSON.stringify(this.tasks);
+      localStorage.setItem('tasks', parsed);
     }
   }
 });
@@ -46,6 +50,22 @@ let app = new Vue({
   data: {
     tasks: []
   },
+  mounted() {
+    if (localStorage.getItem('tasks')) {
+      try {
+        this.tasks = JSON.parse(localStorage.getItem('tasks'));
+      } catch(e) {
+        localStorage.removeItem('tasks');
+      }
+      //this.tasks = localStorage.tasks;
+    }
+  },
+  /*
+  watch: {
+    tasks(newTask) {
+      localStorage.tasks.push(newTask);// = newName;
+    }
+  },*/
   flag_rewrite: false,
 
 });

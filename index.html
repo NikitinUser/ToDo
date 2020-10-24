@@ -9,6 +9,7 @@
 
 </head>
 <body>
+<header class="mb-3"></header>
 <div class="container">
 	<div class="card">
 		<div class="card-body d-flex justify-content-center">
@@ -19,7 +20,7 @@
 			  <section class="tasks ">
 			    <div class="input-group mb-3">
 			      <input type="text" placeholder="Задача" class="form-control" v-model="newTask" @keyup.enter ="addTask" size="100">  
-			      <span class="">
+			      <span class="input-group-append">
 			        <button class="btn btn-primary" @click="addTask">
 			          <i class="fa fa-plus"></i> 
 			        </button>
@@ -43,7 +44,7 @@
 		</div>
 	</div>
 </div>
-
+<footer class="mt-3"></footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 	<script src="src/js/index.js"></script>
 </body>
