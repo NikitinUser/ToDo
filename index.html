@@ -10,8 +10,8 @@
 
 </head>
 <body>
-<header class="mb-3"></header>
-<div class="container">
+<header class="mb-3 mt-3"></header>
+<div class="container mb-5 ">
 	<div class="row d-flex justify-content-center">
 		<div class="col-md-10 col-sm-8">
 			<div class="card">
@@ -34,14 +34,17 @@
 					    </ul>
 					  </section>
 					</template>
-					<template id="task-item">
+					<template id="task-item" class="row">
 					    <li class="list-group-item">
-					        <button :class="className" @click.self="$emit('complete')">
-					          {{ task.title }}
-					        </button>
-					        <button class="pull-right btn btn-outline-danger btn-sm" @click="$emit('remove')">
-					          <i class="fa fa-times"></i>
-					        </button>
+					    	<div class="col-md-12">
+					    		<button :class="className" @click.self="$emit('complete')">
+						          {{ task.title }}
+						        </button>
+						        <button class="pull-right btn btn-outline-danger btn-sm col-md-1" @click="$emit('remove')">
+						          <i class="fa fa-times"></i>
+						        </button>
+					    	</div>
+					        
 					    </li>
 					</template>
 				</div>
@@ -49,7 +52,7 @@
 		</div>
 	</div>
 </div>
-<footer class="mt-3"></footer>
+<footer class="mt-5 mb-5"></footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 	<script src="src/js/index.js"></script>
 </body>

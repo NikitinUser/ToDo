@@ -36,9 +36,9 @@ Vue.component('task-item', {
   props: ['task'],
   computed: {
     className() {
-      let classes = ['btn btn-secondary btn-sm'];
+      let classes = ['btn btn-secondary btn-sm col-md-11'];
       if (this.task.completed) {
-        classes.push('btn btn-success btn-sm');
+        classes.push('btn btn-success btn-sm col-md-11');
       }
       return classes.join(' ');
     }
