@@ -32,15 +32,14 @@
 					        </button>
 					      </span>
 					    </div>
-					    <ul class="list-group">
+					    <ul class="list-group list-group-flush">
 					      <task-item  v-for="(task, index) in tasks" @remove="removeTask(index)" @complete="completeTask(task)" :task="task" :key ="task.id"></task-item>
 					    </ul>
 					  </section>
 					</template>
 
 					<template id="task-item">
-						<ul class=" list-group list-group-flush">
-							<li class="list-group-item">
+						<li class="list-group-item">
 							<div class="row">
 		                        <div class=" col-md-1">
 		                            <input class="pull-left" type="checkbox">
@@ -55,8 +54,7 @@
 		                        </div>
 		                    </div>
 		                               
-							</li>
-						</ul>
+						</li>
 					</template>		
 				</div>
 			</div>
