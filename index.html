@@ -13,7 +13,7 @@
 <header class="mb-3 mt-3"></header>
 <div class="container mb-5 ">
 	<div class="row d-flex justify-content-center">
-		<div class="col-md-10 col-sm-8">
+		<div class="col-md-10 col-sm-10">
 			<div class="card">
 				<div class="card-header">
 					<a href="http://tasktracker.ru">Перейти на полную версию</a>
@@ -39,15 +39,15 @@
 					</template>
 
 					<template id="task-item">
-						<li class="list-group-item">
-							<div class="row">
-		                        <div class=" col-md-1">
+						<li class="list-group-item row">
+							<div class="col-md-12 col-sm-12 d-inline-flex">
+		                        <div class=" col-md-1 col-sm-1">
 		                            <input class="pull-left" type="checkbox">
 		                        </div>
-		                        <div class="col-md-10 text-center">
+		                        <div class="col-md-10 col-sm-10 text-center">
 		                            {{ task.title }}
 		                        </div>
-		                        <div class="col-md-1"> 
+		                        <div class="col-md-1 col-sm-1"> 
 		                            <button class="pull-right btn btn-outline-danger btn-sm " @click="$emit('remove')">
 										<i class="fa fa-trash"></i>
 									</button>
